@@ -20,6 +20,7 @@ var num2 = null;
 var num3 = null;
 var newArray = [];
 var playerScore = 1500;
+var bankAccountBalance= 0
 
 function randomNum(){
   
@@ -34,13 +35,15 @@ function randomNum(){
   if(num1===7 && num2===7 && num3===7){
     console.log('user was successful');
     alert('congrats!');
+    bankAccountBalance +=5000;
   } else if (num1 !== 7 && num2 !==7 && num3 !==7){
     console.log('user failed');
     alert('sorry try again');
+    bankAccountBalance -= 50;
   } 
   
   newArray.length=0;
-  
+  $('.balance').text(bankAccount);
 
 };
 
