@@ -9,7 +9,7 @@ $(document).ready(initializeApp);
 
 function initializeApp() {
   $('.spinButton').on('click', randomNum);
-
+  $('.doubleDown').on('click', doubleDown);
   $('.bankAccount').text(bankAccountBalance);
 };
 
@@ -18,6 +18,7 @@ var num1 = null;
 var num2 = null;
 var num3 = null;
 var newArray = [];
+var newArray2 = [];
 // var playerScore = 1500;
 var bankAccountBalance = 8000;
 
@@ -50,7 +51,7 @@ function randomNum() {
 
 };
 
-function displayNumbers(newArray) {
+function displayNumbers(newArray, newArray2) {
   $(".output1").text(num1);
   $(".output2").text(num2);
   $(".output3").text(num3);
@@ -58,7 +59,38 @@ function displayNumbers(newArray) {
 }
 
 
+function doubleDown (){
+  num1 = Math.floor(Math.random() * 16);
+  num1 = Math.floor(Math.random() * 16);
+  num1 = Math.floor(Math.random() * 16);
+  newArray2.push(num1, num2, num3);
+  console.log(newArray2)
 
+  displayNumbers(newArray2);
+
+
+
+  if (num1 === 7 && num2 === 7 && num3 === 7) {
+    console.log('user was successful');
+    alert('congrats!');
+    bankAccountBalance += 10000;
+    
+  } else if (num1 !== 7 && num2 !== 7 && num3 !== 7) {
+    console.log('user failed');
+    // alert('sorry try again');
+    bankAccountBalance -= 100;
+    
+
+    $('.bankAccount').text(bankAccountBalance);
+    newArray.length = 0;
+
+
+  }
+
+
+
+
+}
 
 
 
