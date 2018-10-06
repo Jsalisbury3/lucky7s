@@ -88,6 +88,7 @@ function doubleDown (){
     $('.bankAccount').text(bankAccountBalance);
     $('.scoreBoard').text(scoreBoard);
     newArray.length = 0;
+    newArray.length = 0;
 
 
   }
