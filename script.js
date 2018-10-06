@@ -61,8 +61,8 @@ function displayNumbers(newArray, newArray2) {
 
 function doubleDown (){
   num1 = Math.floor(Math.random() * 16);
-  num1 = Math.floor(Math.random() * 16);
-  num1 = Math.floor(Math.random() * 16);
+  num2 = Math.floor(Math.random() * 16);
+  num3 = Math.floor(Math.random() * 16);
   newArray2.push(num1, num2, num3);
   console.log(newArray2)
 
